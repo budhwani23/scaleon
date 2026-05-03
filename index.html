@@ -57,9 +57,9 @@
     }
 
     .container {
-      max-width: 680px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 1.5rem 3rem;
+      padding: 0 2rem 3rem;
     }
 
     .sr-only {
@@ -106,9 +106,9 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 2rem;
-      align-items: center;
+      align-items: start;
     }
 
     .status-row {
@@ -199,6 +199,8 @@
       font-size: 13px;
       font-weight: 700;
       color: var(--color-text-primary);
+      text-align: right;
+      word-break: break-word;
     }
 
     .stat-value.good {
@@ -503,13 +505,96 @@
       }
     }
 
-    @media (max-width: 640px) {
-      .section {
-        padding: 2rem 1.25rem;
+    /* Large desktop */
+    @media (min-width: 1024px) {
+      .container {
+        padding: 0 3rem 4rem;
       }
+      .section {
+        padding: 3rem 2.5rem;
+      }
+      .hero-title {
+        font-size: 3.6rem;
+      }
+      .footer-title {
+        font-size: 2.4rem;
+      }
+    }
 
+    /* Tablet */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.5rem 2.5rem;
+      }
+      .section {
+        padding: 2rem 1.5rem;
+      }
       .hero-title {
         font-size: 2.6rem;
+      }
+      .footer-title {
+        font-size: 1.75rem;
+      }
+      .fit-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+      .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 1rem 2rem;
+      }
+      .section {
+        padding: 1.75rem 1rem;
+      }
+      .hero-title {
+        font-size: 2.1rem;
+      }
+      .footer-title {
+        font-size: 1.5rem;
+      }
+      .stat-card {
+        padding: 1rem;
+      }
+      .demo-box {
+        padding: 1rem;
+      }
+      .fit-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Small mobile */
+    @media (max-width: 400px) {
+      .hero-title {
+        font-size: 1.85rem;
+      }
+      .fit-grid {
+        grid-template-columns: 1fr;
+      }
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      .tag-row {
+        gap: 6px;
+      }
+      .tag {
+        font-size: 10px;
+        padding: 4px 10px;
       }
     }
   </style>
